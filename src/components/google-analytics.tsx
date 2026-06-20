@@ -1,5 +1,12 @@
 "use client";
 
+declare global {
+  interface Window {
+    dataLayer?: unknown[];
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
 import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import Script from "next/script";
@@ -34,17 +41,23 @@ export function GoogleAnalytics() {
   }
 
   return (
-    <Script
-      src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}
-      strategy="afterInteractive"
-      onLoad={() => {
-        window.dataLayer = window.dataLayer || [];
-        window.gtag = function gtag(...args: unknown[]) {
-          window.dataLayer?.push(args);
-        };
-        window.gtag("js", new Date());
-        window.gtag("config", measurementId);
-      }}
-    />
+    <>
+      <Script
+        id="google-analytics-inline"
+        strategy="beforeInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            window.gtag = function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${measurementId}');
+          `,
+        }}
+      />
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}
+        strategy="afterInteractive"
+      />
+    </>
   );
 }
