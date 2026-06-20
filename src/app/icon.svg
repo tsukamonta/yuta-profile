@@ -1,0 +1,17 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 64 64"
+  role="img"
+  aria-label="Yuta Profile"
+>
+  <rect width="64" height="64" rx="16" fill="#eef1f4" />
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="none" stroke="#1f4ed8" stroke-opacity="0.22" />
+  <path
+    d="M18 16 L32 32 L46 16 M32 32 L32 48"
+    fill="none"
+    stroke="#1f4ed8"
+    stroke-width="7"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>
