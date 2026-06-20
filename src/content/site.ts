@@ -8,7 +8,7 @@ import type { LinkItem, SiteContent } from "@/content/site-types";
 
 const externalLinks: LinkItem[] = [
   { label: "X / Twitter", note: "@tsukamonta", href: "https://x.com/tsukamonta" },
-  { label: "Instagram", note: "@yuta_t._", href: "https://www.instagram.com/yuta_t./" },
+  { label: "Instagram", note: "@yuta_t._", href: "https://www.instagram.com/yuta_t._/" },
   { label: "GitHub", note: "TSUKAMOTO-Yuta", href: "https://github.com/TSUKAMOTO-Yuta" },
   { label: "Zenn", note: "tsukamonta", href: "https://zenn.dev/tsukamonta" },
   { label: "読書メーター", note: "yuta", href: "https://bookmeter.com/users/1128915" },
