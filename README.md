@@ -6,7 +6,7 @@ Next.jsの静的エクスポートで構築するプロフィールサイト。
 ## 必要環境
 
 - Node.js 24 LTS推奨（Next.jsの最低要件は20.9.0以上）
-- npm
+- npm 10.9.2推奨（Cloudflare Pages のビルド環境に合わせる）
 
 ## 開発
 
@@ -33,6 +33,11 @@ npm run build
 
 `npm run build`で静的ファイルが`out/`へ出力される。
 Cloudflare Pagesではビルドコマンドを`npm run build`、出力先を`out`に設定する。
+Cloudflare Pages は依存インストール時に `npm ci` を使うため、`package-lock.json` は npm 10.9.2 で検証する。
+
+```bash
+npx npm@10.9.2 ci --dry-run --progress=false
+```
 
 ## コンテンツ更新
 
@@ -43,4 +48,4 @@ Cloudflare Pagesではビルドコマンドを`npm run build`、出力先を`out
 ## 運用手順
 
 - [運用手順の一覧](./doc/README.md)
-- [Cloudflare Terraform の下書き](./terraform/README.md)
+- [Cloudflare Pages デプロイ手順](./doc/deploy.md)

@@ -6,4 +6,4 @@
 ## 一覧
 
 - [GA4 と Search Console の運用](./analytics.md)
-- [Cloudflare と Xserver のドメイン分離手順](./cloudflare-domain.md)
+- [Cloudflare Pages デプロイ手順](./deploy.md)

@@ -9,7 +9,7 @@ import type { LinkItem, SiteContent } from "@/content/site-types";
 const externalLinks: LinkItem[] = [
   { label: "X / Twitter", note: "@tsukamonta", href: "https://x.com/tsukamonta" },
   { label: "Instagram", note: "@yuta_t._", href: "https://www.instagram.com/yuta_t._/" },
-  { label: "GitHub", note: "TSUKAMOTO-Yuta", href: "https://github.com/TSUKAMOTO-Yuta" },
+  { label: "GitHub", note: "tsukamonta", href: "https://github.com/tsukamonta" },
   { label: "Zenn", note: "tsukamonta", href: "https://zenn.dev/tsukamonta" },
   { label: "読書メーター", note: "yuta", href: "https://bookmeter.com/users/1128915" },
   { label: "Filmarks", note: "tsukamonta", href: "https://filmarks.com/users/tsukamonta" },
@@ -212,7 +212,7 @@ export const siteContent = {
             links: [
               { label: "GitHub", href: "https://github.com/TSUKAMOTO-Yuta/yuta-profile" },
             ],
-            tech: ["Next.js", "TypeScript", "Cloudflare Pages"],
+            tech: ["Next.js", "TypeScript", "Cloudflare Pages", "Google Analytics"],
           },
         ],
       },
