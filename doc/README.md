@@ -7,3 +7,4 @@
 
 - [GA4 と Search Console の運用](./analytics.md)
 - [Cloudflare Pages デプロイ手順](./deploy.md)
+- [SEO 運用メモ](./seo.md)

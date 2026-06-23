@@ -17,10 +17,15 @@ const externalLinks: LinkItem[] = [
 
 const ownerName = "つかもとゆうた";
 const siteTitle = `${ownerName} | Profile`;
+const siteDescription =
+  "職業開発者・趣味開発者としてのプロフィール、スキル、資格、成果物、外部リンクをまとめた個人サイトです。";
 
 export const siteContent = {
   metadata: {
     siteTitle,
+    siteUrl: "https://yu-ta.jp/",
+    description: siteDescription,
+    alternateNames: ["塚本祐太", "Yuta Tsukamoto", "TSUKAMOTO Yuta", "tsukamonta"],
   },
   labels: siteLabels,
   owner: {

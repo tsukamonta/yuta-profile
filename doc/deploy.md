@@ -31,6 +31,9 @@ npm run build
 npx npm@10.9.2 ci --dry-run --progress=false
 ```
 
+`npm run build` では、npm scripts の仕様により `prebuild` が先に実行される。
+このプロジェクトでは `prebuild` で `scripts/generate-sitemap.mjs` を実行し、`public/sitemap.xml` を生成してから Next.js の静的ビルドを行う。
+
 `npx npm@10.9.2 ci --dry-run --progress=false` は、Cloudflare Pages と同じ npm 10 系の lock 検証をローカルで再現するために使う。
 
 ## package-lock.json の注意

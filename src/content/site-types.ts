@@ -57,8 +57,15 @@ export type WorkSection = {
   items: Work[];
 };
 
+export type SiteMetadata = {
+  siteTitle: string;
+  siteUrl: string;
+  description: string;
+  alternateNames: string[];
+};
+
 export type SiteContent = {
-  metadata: { siteTitle: string };
+  metadata: SiteMetadata;
   labels: typeof siteLabels;
   owner: { name: string; role: string; introduction: string };
   externalLinks: LinkItem[];
